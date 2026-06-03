@@ -9,8 +9,19 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.company.name} | ${siteConfig.company.address.pref}の運送会社`,
-  description: siteConfig.hero.lead,
+  title: `${siteConfig.company.name} | ${siteConfig.company.tagline}`,
+  description: siteConfig.company.description,
+  openGraph: {
+    title: `${siteConfig.company.name} | ${siteConfig.company.tagline}`,
+    description: siteConfig.company.description,
+    url: siteConfig.company.url,
+    siteName: siteConfig.company.name,
+    locale: "ja_JP",
+    type: "website",
+  },
+  alternates: {
+    canonical: siteConfig.company.url,
+  },
 };
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 {
-  "name": "lp-template-test",
+  "name": "aisupports-lp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.34.0",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4"
