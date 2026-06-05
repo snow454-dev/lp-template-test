@@ -1,16 +1,18 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
-import Products from "@/components/sections/Products";
-import Kodawari from "@/components/sections/Kodawari";
-import News from "@/components/sections/News";
-import Access from "@/components/sections/Access";
+import TrustBar from "@/components/sections/TrustBar";
+import Services from "@/components/sections/Services";
+import Strengths from "@/components/sections/Strengths";
+import Flow from "@/components/sections/Flow";
+import CompanyInfo from "@/components/sections/CompanyInfo";
+import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import { siteConfig } from "@/config/site.config";
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "FoodEstablishment",
+    "@type": "LocalBusiness",
     name: siteConfig.company.name,
     description: siteConfig.company.description,
     url: siteConfig.company.url,
@@ -18,11 +20,12 @@ export default function Home() {
     telephone: siteConfig.company.tel,
     address: {
       "@type": "PostalAddress",
-      postalCode: siteConfig.company.address.zip,
-      streetAddress: siteConfig.company.address.line1,
+      streetAddress: siteConfig.company.address,
+      addressRegion: "長野県",
       addressCountry: "JP",
     },
-    openingHours: ["Mo Tu We Th Fr 10:00-19:00", "Sa Su 10:00-18:00"],
+    areaServed: ["長野県", "関東地方", "中部地方", "北陸地方"],
+    serviceType: "一般貨物自動車運送事業",
   };
 
   return (
@@ -34,10 +37,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Products />
-        <Kodawari />
-        <News />
-        <Access />
+        <TrustBar />
+        <Services />
+        <Strengths />
+        <Flow />
+        <CompanyInfo />
+        <Contact />
       </main>
       <Footer />
     </>

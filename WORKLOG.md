@@ -1,5 +1,35 @@
 # 作業ログ
 
+## 2026-06-05
+
+### 実装した内容（長野県 運送業 HP 全面リビルド）
+- 食料品店LPを全廃し、長野県の運送業（一般貨物輸送）HP として再構築
+- カラー: ディープネイビー #1e3a5f × ウォームオレンジ #e85d04 × 白/ライトグレー
+- Unsplash（トラック画像）をHeroで使用
+
+### 作成・更新したファイル
+- `src/config/site.config.ts` — 運送業コンテンツ（全社情報プレースホルダー）
+- `src/app/globals.css` — ネイビー × オレンジ パレットに更新
+- `src/app/layout.tsx` — メタデータ更新
+- `src/app/page.tsx` — 新セクション構成＋JSON-LD (LocalBusiness)
+- `src/components/sections/Header.tsx` — 電話番号 + オレンジCTA
+- `src/components/sections/Hero.tsx` — トラック全画面Hero + 2CTA
+- `src/components/sections/TrustBar.tsx` — 新規: ネイビー帯4指標
+- `src/components/sections/Services.tsx` — 新規: 一般貨物輸送詳細
+- `src/components/sections/Strengths.tsx` — 新規: 強み4カード
+- `src/components/sections/Flow.tsx` — 新規: ご利用の流れ4ステップ
+- `src/components/sections/CompanyInfo.tsx` — 新規: 会社概要テーブル
+- `src/components/sections/Contact.tsx` — 新規: 電話・メール・フォーム
+- `src/components/sections/Footer.tsx` — 運送業フッターに更新
+- 旧食料品店セクション（Products/Kodawari/News/Access）を削除
+
+### 残課題
+- 実際の会社名・住所・電話番号・許可番号に差し替え
+- Hero画像を実車・実際の風景写真に差し替え
+- お問い合わせフォームのバックエンド連携（Resend等）
+- Vercel デプロイ設定
+- OGP画像の作成
+
 ## 2026-05-28
 - LP量産テンプレートの初期セットアップ
 - Next.js 14 + TypeScript + Tailwind v4 でプロジェクト作成
